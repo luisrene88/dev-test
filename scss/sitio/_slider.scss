@@ -1,0 +1,64 @@
+.common-slider{
+	background-repeat : no-repeat;
+	background-size : cover;
+	height : 250px;
+	@include desde(tablet){
+		 height:500px;
+	}
+
+}
+
+#slider{
+	margin-top : 1px;
+}
+
+#slide1{
+	background-image : url("../assets/imgs/slider/slide1.jpg");
+	@extend .common-slider;
+	
+
+}
+#slide2{
+	background-image : url("../assets/imgs/slider/slide2.jpg");
+	@extend .common-slider;
+	
+
+}
+#slide3{
+	background-image : url("../assets/imgs/slider/slide3.jpg");
+	@extend .common-slider;
+	
+
+}
+#slide4{
+	background-image : url("../assets/imgs/slider/slide4.jpg");
+	@extend .common-slider;
+
+
+}
+.ads{
+	text-transform : uppercase;
+	font-size : 3em;
+	color : white;
+	font-weight : 200;
+	margin-bottom : 1em;
+	font-family : "Raleway";
+	@include desde(tablet){
+		width : 300px;;
+		margin-left : 20%;
+	}
+	@include hasta(tablet){
+		width : 280px;
+	}
+	&__brand{
+		font-weight: bold;
+	}
+	&__button{
+		font-size: .3em;
+		border : 1px solid white;
+		padding : 5px;
+		font-weight: 400;
+		cursor : pointer;
+	}
+
+}

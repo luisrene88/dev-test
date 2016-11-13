@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,400');
+body{
+	margin: 0;
+	font-family: 'Helvetica';
+	display : flex;
+	min-height : 100vh;
+	flex-wrap : wrap;
+}
+header{
+	width : 100%;
+	background-color : $main-color;
+	max-height : 90px;
+	margin-bottom : 10px;
+	box-shadow: 0 1px 2px 1px rgba(0,0,0,.08), 0 3px 6px rgba(0,0,0,.08);
+
+	
+}
+footer{
+	align-self: flex-end;
+	width:100%;
+	background-color : $seconday-color;
+}
+section{
+	margin : 5px;
+}
+.show-menu{
+    //padding: 10px 0;
+    display: none;
+    /*background-image : url('../assets/imgs/menu.png');
+    background-size : 100%;;
+    background-repeat :  no-repeat;*/
+    @include hasta(tablet){
+    	display : flex;
+    	color : black;
+    	padding : 5px;
+    	border : 2px solid black;
+    	cursor : pointer;
+    }
+}
+.ed-menu{
+
+	& li{
+		margin-top: 15px;
+		margin-bottom: 15px;
+		letter-spacing : 1px;
+		& a{
+			background-color : $third-color;
+			color : black;
+			
+		}
+	}
+	@include hasta(tablet){
+		display : none;
+	}
+	@include hasta(web){
+		font-size : .8em;
+	}
+}
+.active{
+
+	font-weight : 900;
+	& a{
+		box-shadow: 0 -3px black inset;		
+	}
+	
+}
+.brand{
+	text-transform : uppercase;
+	font-size : 2.8em;
+	font-style : italic;
+	letter-spacing : 2px;
+	color : black;
+	@include hasta(tablet){
+		font-size: 2.4em;
+	}
+	@include hasta(web){
+		font-size : 2.2em;
+	}
+	&__rusty{
+		font-weight: bold;
+	}
+	&__cars{
+		font-weight: 200;
+		font-family: 'Raleway';
+	}
+	&__tv{
+		background-color : black;
+		border-radius : 5px;
+		font-size: .5em;
+		color : white;
+		margin: 5px;
+		font-weight: bold;
+		padding : 3px;
+		transform : skewX(-12deg);
+
+	}
+
+}
+.footer{
+	color : white;
+	//margin-bottom : 2em;
+	&__menu{
+		& li a {
+			background-color : black;
+			color : white;
+			font-size: 1.1em;
+		}
+	}
+	&__copyright{
+		padding : 15px;
+		font-size: .9em;
+	}
+}
